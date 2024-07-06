@@ -1,0 +1,92 @@
+body {
+    display: flex;
+    font-family: Arial,sans-serif;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    padding-top:30px;
+    background-color: white;
+}
+
+.intro {
+    padding-top: 20px;
+    position: center;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.info-box{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    max-width: 400px;
+    width: 100%;
+}
+
+.lyrics-container{
+    background: white;
+    padding: 30px;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.lyrics{
+    line-height: 1.6
+}
+
+.lyrics p{
+    margin-bottom: 20px;
+}
+
+.animated-button {
+    display: inline-block;
+    padding: 15px 30px;
+    margin: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #3498db;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.animated-button:hover {
+    background-color: #2980b9;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.animated-button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.15);
+    transition: all 0.5s ease;
+    border-radius: 50%;
+    z-index: 0;
+    transform: translate(-50%, -50%) scale(0);
+}
+
+.animated-button:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.animated-button span {
+    position: relative;
+    z-index: 1;
+}
